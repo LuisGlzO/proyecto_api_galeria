@@ -1,0 +1,36 @@
+<app-menu-superior></app-menu-superior>
+<div class="login text-center">
+    <p class="fs-4"><b>LOGIN</b></p>
+
+    <div class="btn-group">
+        <button [class.active-left]="isSignIn" [class.disabled-left]="!isSignIn" (click)="switchToSignIn()">Sign In</button>
+        <button [class.active-right]="!isSignIn" [class.disabled-right]="isSignIn" (click)="switchToSignUp()">Sign Up</button>
+    </div>
+
+    <div *ngIf="isSignIn">
+        <label class="fs-6">Email</label><br>
+        <input class="campo" type="email" [(ngModel)]="email"><br>
+        <label class="fs-6">Contraseña</label><br>
+        <input class="campo" type="password" [(ngModel)]="password"><br>
+        <button class="sign">SIGN IN</button>
+    </div>
+      
+    <div *ngIf="!isSignIn">
+        <label class="fs-6">Email</label><br>
+        <input class="campo" type="email" [(ngModel)]="email"><br>
+        <label class="fs-6">Contraseña</label><br>
+        <input class="campo" type="password" [(ngModel)]="password"><br>
+        <label class="fs-6">Repetir contraseña</label><br>
+        <input class="campo" type="password" [(ngModel)]="password_confirm"><br>
+        <input type="checkbox" [(ngModel)]="isAdmin"> ¿Es administrador? <br>
+        <button class="sign">SIGN UP</button>
+    </div>
+</div>
+<style>
+    .campo{
+        width: 300px;
+    }
+    .login{
+        margin-top: 50px;
+    }
+</style>
