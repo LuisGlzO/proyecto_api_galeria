@@ -12,7 +12,7 @@
         <input class="campo" type="email" [(ngModel)]="email"><br>
         <label class="fs-6">Contraseña</label><br>
         <input class="campo" type="password" [(ngModel)]="password"><br>
-        <button class="sign">SIGN IN</button>
+        <button (click)="haciaInicio()" class="sign">SIGN IN</button>
     </div>
       
     <div *ngIf="!isSignIn">
@@ -23,7 +23,7 @@
         <label class="fs-6">Repetir contraseña</label><br>
         <input class="campo" type="password" [(ngModel)]="password_confirm"><br>
         <input type="checkbox" [(ngModel)]="isAdmin"> ¿Es administrador? <br>
-        <button class="sign">SIGN UP</button>
+        <button (click)="switchToSignIn()" class="sign">SIGN UP</button>
     </div>
 </div>
 <style>

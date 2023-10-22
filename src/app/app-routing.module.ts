@@ -5,7 +5,7 @@ import { CuadriculaPrincipalComponent } from './cuadricula-principal/cuadricula-
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
-  {path:'principal', component: CuadriculaPrincipalComponent}
+  {path:'inicio', component: CuadriculaPrincipalComponent}
 ];
 
 @NgModule({
