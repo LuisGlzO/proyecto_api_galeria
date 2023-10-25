@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
 import { CuadriculaPrincipalComponent } from './cuadricula-principal/cuadricula-principal.component';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { UploadPhotoComponent } from './upload-photo/upload-photo.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MenuSuperiorComponent,
-    CuadriculaPrincipalComponent
+    CuadriculaPrincipalComponent,
+    NotfoundComponent,
+    UploadPhotoComponent
   ],
   imports: [
     BrowserModule,

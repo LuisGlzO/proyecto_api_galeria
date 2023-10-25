@@ -1,0 +1,28 @@
+<!-- <p>upload-photo works!</p> -->
+<app-menu-superior [showButtons]="false"></app-menu-superior> <!--- Ocultamos botones --->
+<div class="login text-center">
+    <p class="fs-4"><b>UPLOAD YOUR IMAGE</b></p>
+
+    <div>
+        <button class="btn btn-primary" (click)="openFileExplorer()">Choose file</button>
+        <input type="file" id="fileInput" accept="image/*" style="display: none" (change)="chosenFile($event)">
+    </div>
+    
+
+    <div *ngIf="true">
+        
+        <label class="fs-6">Titulo</label><br>
+        <input class="campo" type="text" ><br>
+        <label class="fs-6">Descripcion</label><br>
+        <input class="campo" type="text" ><br>
+        <button class="sign">UPLOAD</button>
+    </div>
+</div>
+<style>
+    .campo{
+        width: 300px;
+    }
+    .login{
+        margin-top: 50px;
+    }
+</style>
