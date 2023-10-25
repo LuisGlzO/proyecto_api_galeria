@@ -9,6 +9,9 @@ import { CuadriculaPrincipalComponent } from './cuadricula-principal/cuadricula-
 import { FormsModule } from '@angular/forms';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UploadPhotoComponent } from './upload-photo/upload-photo.component'; 
+import { NgxPaginationModule } from 'ngx-pagination';
+import { SpinnerComponent } from './spinner/spinner.component';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +20,14 @@ import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
     MenuSuperiorComponent,
     CuadriculaPrincipalComponent,
     NotfoundComponent,
-    UploadPhotoComponent
+    UploadPhotoComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
